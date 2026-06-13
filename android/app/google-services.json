@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1089314590488",
+    "project_id": "notesapp-8018b",
+    "storage_bucket": "notesapp-8018b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089314590488:android:97e66e6a3b4e70aa42186d",
+        "android_client_info": {
+          "package_name": "com.example.mywalletapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAsIoxFYSxMdL7BDuBmRbS6cf0DR_2QgE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
