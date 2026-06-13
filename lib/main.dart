@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:mywalletapp/widgets/splash_screen.dart';
+import 'package:mywalletapp/features/home/data/models/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

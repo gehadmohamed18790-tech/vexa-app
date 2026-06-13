@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mywalletapp/app_colors.dart';
+import 'package:mywalletapp/core/constants/app_colors.dart';
 
-import 'package:mywalletapp/widgets/main_tabs_screen.dart';
+import 'package:mywalletapp/features/home/presentation/main_tabs_screen.dart';
 
 
 class SplashScreen extends StatefulWidget {

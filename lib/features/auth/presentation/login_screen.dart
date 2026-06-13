@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mywalletapp/widgets/home_screen.dart';
+import 'package:mywalletapp/features/home/presentation/home_screen.dart';
 import 'sign_in.dart'; 
 
 class LoginScreen extends StatelessWidget {

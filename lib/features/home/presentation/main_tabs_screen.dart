@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mywalletapp/widgets/home2_csreen.dart';
+import 'package:mywalletapp/features/home/presentation/home2_csreen.dart';
 import 'home_screen.dart';
 
 
