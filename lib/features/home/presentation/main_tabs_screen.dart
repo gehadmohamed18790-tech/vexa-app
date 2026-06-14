@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mywalletapp/features/home/presentation/home2_csreen.dart';
+import '../cubit/home_cubit.dart';
 import 'home_screen.dart';
-
 
 class MainTabsScreen extends StatefulWidget {
   const MainTabsScreen({super.key});
@@ -13,17 +14,20 @@ class MainTabsScreen extends StatefulWidget {
 class _MainTabsScreenState extends State<MainTabsScreen> {
   int _currentIndex = 0;
 
-  final List<Widget> _screens = [
-    const HomeScreen(),
-    const CategoriesScreen(),
-    const Scaffold(body: Center(child: Text("Favorites"))),
-    const Scaffold(body: Center(child: Text("Profile"))),
-  ];
-
   @override
   Widget build(BuildContext context) {
+    final List<Widget> screens = [
+      const HomeScreen(),
+      BlocProvider.value(
+        value: context.read<HomeCubit>(),
+        child: const CategoriesScreen(),
+      ),
+      const Scaffold(body: Center(child: Text("Favorites"))),
+      const Scaffold(body: Center(child: Text("Profile"))),
+    ];
+
     return Scaffold(
-      body: _screens[_currentIndex],
+      body: screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: const Color(0xFF004182),
