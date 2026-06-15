@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mywalletapp/features/home/presentation/home2_csreen.dart';
+import 'package:mywalletapp/features/home/presentation/profile_view.dart';
 import '../cubit/home_cubit.dart';
 import 'home_screen.dart';
+
 
 class MainTabsScreen extends StatefulWidget {
   const MainTabsScreen({super.key});
@@ -23,7 +25,7 @@ class _MainTabsScreenState extends State<MainTabsScreen> {
         child: const CategoriesScreen(),
       ),
       const Scaffold(body: Center(child: Text("Favorites"))),
-      const Scaffold(body: Center(child: Text("Profile"))),
+      const ProfileView(),
     ];
 
     return Scaffold(
