@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mywalletapp/core/constants/app_colors.dart';
+import 'package:mywalletapp/core/storage/cach_helper.dart';
+import 'package:mywalletapp/features/auth/presentation/login_screen.dart';
 //import 'package:mywalletapp/features/auth/presentation/login_screen.dart';
 //import 'package:mywalletapp/features/home/presentation/home_screen.dart';
 import 'package:mywalletapp/features/home/presentation/main_tabs_screen.dart';
@@ -20,9 +22,15 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       if (mounted) {
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const MainTabsScreen()),
-        );
+        if (CacheHelper.getData(key: "user") != null) {
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => const MainTabsScreen()),
+          );
+        } else {
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => const LoginScreen()),
+          );
+        }
       }
     });
   }

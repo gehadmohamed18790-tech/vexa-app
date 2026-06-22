@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mywalletapp/features/home/cubit/favorites_cubit.dart';
+//import 'package:mywalletapp/features/home/cubit/favorites_cubit.dart';
 import '../cubit/home_cubit.dart';
 import '../cubit/home_state.dart';
 import 'product_details_view.dart';
